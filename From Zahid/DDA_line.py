@@ -14,7 +14,7 @@ def DDA(x1, y1, x2, y2):
     y_points = []
 
     for i in range(steps + 1):
-        x_points.append(round(x))  # Round to nearest pixel
+        x_points.append(round(x))  # Round to nearest pixel``
         y_points.append(round(y))
         x += x_inc
         y += y_inc
@@ -22,8 +22,8 @@ def DDA(x1, y1, x2, y2):
     return x_points, y_points
 
 # Example usage
-x1, y1 = 2, 3
-x2, y2 = 15, 10
+x1, y1 = 1, 1
+x2, y2 = 5, 4
 x_points, y_points = DDA(x1, y1, x2, y2)
 
 # Plotting the result

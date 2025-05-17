@@ -69,4 +69,4 @@ while True:
     # angle += 0.1   Commented out to stop leaf movement
 
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(20)

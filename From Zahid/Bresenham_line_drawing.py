@@ -20,6 +20,7 @@ def bresenham_with_p(x1, y1, x2, y2):
 
         if p < 0:
             p += two_dy
+            
         else:
             y += 1
             p += two_dy_dx
@@ -29,8 +30,8 @@ def bresenham_with_p(x1, y1, x2, y2):
     return x_points, y_points
 
 # Example usage (only works for x2 > x1 and 0 ≤ slope ≤ 1)
-x1, y1 = 2, 3
-x2, y2 = 15, 10
+x1, y1 = 1, 1
+x2, y2 = 5, 4
 x_points, y_points = bresenham_with_p(x1, y1, x2, y2)
 
 # Plotting the result
