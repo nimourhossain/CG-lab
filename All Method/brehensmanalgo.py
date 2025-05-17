@@ -2,7 +2,7 @@ import pygame
 import sys
 
 pygame.init()
-win = pygame.display.set_mode((400, 300))
+win = pygame.display.set_mode((600, 600))
 pygame.display.set_caption("Bresenham Line with Steps")
 
 WHITE = (255, 255, 255)
@@ -29,9 +29,9 @@ def bresenham(x0, y0, x1, y1):
         points.append((x, y))
     return points
 
-start = (2, 3)
-end = (7, 5)
-scale = 50
+start = (1, 1)
+end =(5, 4)
+scale = 100
 
 points = bresenham(*start, *end)
 
