@@ -27,6 +27,7 @@ def draw_house():
 
     # Windows
     pygame.draw.rect(screen, BLUE, (220, 220, 40, 40))
+    
     pygame.draw.rect(screen, BLUE, (340, 220, 40, 40))
 
 # Main loop

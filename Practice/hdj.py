@@ -1,38 +1,24 @@
-import matplotlib.pyplot as plt
+import pygame
+import sys
+pygame.init()
 
-def MID(x1,y1,x2,y2):
-    x, y =x1,y1
-    dx=x2-x1
-    dy=y2-y1
-    x_points=[]
-    y_points=[]
-    p=dy-(dx/2)
-    while x<=x2:
-        x_points.append(round(x))  # Round to nearest pixel``
-        y_points.append(round(y))
-        if(p<0):
-            p+=dy
-        else:
-            y += 1
-            p+=dy-dx
+screen = pygame.display.set_mode((600,600))
+pygame.display.set_caption("HJHJH")
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+BROWN = (139, 69, 19)
+BLUE = (0, 191, 255)
+GRAY = (169, 169, 169)
+GREEN = (34, 139, 34)
+RED = (220, 20, 60)
 
-        x+=1
+running = True
 
-    return x_points,y_points
-           
+while running:
+    screen.fill(GREEN)
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
-
-
-
-x1, y1 = 1, 1
-x2, y2 = 5, 4
-x_points , y_points = MID(x1,y1,x2,y2)
-
-
-plt.plot(x_points,y_points,marker='o',color='blue')
-plt.title("DDA")
-plt.xlabel("X")
-plt.ylabel("Y")
-plt.grid(True)
-plt.axis("equal")
-plt.show()
+    pygame.display.flip()

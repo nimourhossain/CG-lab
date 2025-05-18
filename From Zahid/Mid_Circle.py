@@ -31,7 +31,7 @@ def midpoint_circle(cx, cy, r):
 
 # Example usage:
 center_x, center_y = 0, 0
-radius = 10
+radius = 8
 circle_points = midpoint_circle(center_x, center_y, radius)
 
 # Plotting
